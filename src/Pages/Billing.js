@@ -4,9 +4,14 @@ import {auth} from '../firebase'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Map from './map.png'
-import {Link} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 const Billing = () =>{
+    let navigate = useNavigate(); 
+    const routeChange = () =>{ 
+        let path = '/'; 
+        navigate(path);
+      }
     return(
     <div className='box'>
         <div className='info'>
@@ -20,7 +25,7 @@ const Billing = () =>{
         </div>
         <div>
             <Button variant="outlined">REPORT</Button>
-            <Button variant="contained"><Link to="/" className="btn btn-primary">CONFIRM</Link></Button>
+            <Button variant="contained" onClick={routeChange}>CONFIRM</Button>
         </div>
     </div>
     )
