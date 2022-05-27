@@ -3,11 +3,24 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
+import { createStore } from 'redux';
+import rootReducer from './store/modules';
+import ButtonAppBar from './Components/ButtonAppBar';
+
+
+const devTools =
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+const store = createStore(rootReducer, devTools);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    {/* <Provider>
+      <App />
+    </Provider> */}
+    <ButtonAppBar/>
+    <App/>
   </React.StrictMode>
 );
 

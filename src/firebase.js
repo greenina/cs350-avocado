@@ -2,6 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 import 'firebase/compat/auth';
+import Button from '@mui/material/Button';
 
 const firebaseConfig = {
   apiKey: "AIzaSyC9pftT4dIMXTh-EwKPWT4HLwXf1hDq9Qo",
@@ -16,5 +17,30 @@ const firebaseConfig = {
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 firebase.firestore().enablePersistence();
 const db = firebaseApp.firestore();
+const auth = firebase.auth();
+const storage = firebase.storage();
 
-export {db, firebaseApp, firebase};
+function SignIn() {
+  const signInWithGoogle = async () => {
+    const provider = new firebase.auth.GoogleAuthProvider();
+    await auth.signInWithPopup(provider);
+  }
+
+  return (
+    <div>
+      <Button color="inherit" onClick = {signInWithGoogle}>Login</Button>
+    </div>
+  )
+}
+
+function SignOut() {
+  const signOutWithGoogle = () => {
+    auth.signOut()
+    window.location.href='/'
+  }
+  return auth.currentUser && (
+    <button onClick = {signOutWithGoogle}>Sign Out</button>
+  )
+}
+
+export {db, firebaseApp, firebase, storage, auth, SignIn, SignOut};
