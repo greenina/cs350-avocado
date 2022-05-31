@@ -1,11 +1,75 @@
 .box{
-    border: 1px solid black;
-    margin: 10px;
-    border-radius: 10px;
     height: 100%;
-    text-align: center;
     align-items: center;
+    overflow: hidden;
 }
 .image{
-    width: 50%;
+    position: absolute;
+    width: 100%;
+    overflow: scroll;
+    height: calc(100vh - 56px);
+    object-fit: scale-down;
+}
+.info{
+    position: fixed;
+    bottom: 0;
+    background-color: white;
+    width: 100vw;
+    height: 250px;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: 0px -5px 5px rgba(0, 0, 0, 0.1);
+}
+.info h3 {
+    width: 100vw;
+    text-align: center;
+}
+.info button {
+    width: 90vw;
+    margin: 5vw;
+}
+.info div{
+    margin-left: 5vw;
+    margin-bottom: 7px;
+}
+.info div span{
+    font-weight: 600;
+    font-size: 20px;
+}
+.billing_popup{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    background-color: white;
+    height: 80vh;
+    width: 80vw;
+    bottom: 80px;
+    left: 10vw;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+
+}
+.billing_popup >*{
+    margin-bottom: 20px;
+}
+
+.billing_popup button{
+    background-color: #fef01b;
+    border-radius: 0;
+    box-shadow: none;
+    color: black;
+    width: 60vw;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-left: 10vw;
+}
+.billing_popup #close{
+    font-size: 12px;
+    text-decoration: underline;
+}
+.block{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
 }
