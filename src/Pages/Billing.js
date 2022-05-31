@@ -9,6 +9,7 @@ import { useState } from 'react';
 
 const Billing = () =>{
     const [bill, setBill] = useState(false);
+    const creditableness = false;
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
         let path = '/'; 
@@ -23,8 +24,9 @@ const Billing = () =>{
             <h3>Riding Info</h3>
             <div>Distance <span>2000m</span> </div>
             <div>Time <span>00:20:00</span> </div>
-            <div>Cost <span>6000won</span> </div>
-            <Button variant="contained" onClick={()=>{setBill(true)}}>CONFIRM</Button>
+            <div>Cost <span>{creditableness?"Free":"6000won"}</span> </div>
+            {creditableness?<Button variant="contained" onClick={routeChange}>CONFIRM</Button>:<Button variant="contained" onClick={()=>{setBill(true)}}>PAYMENT</Button>}
+
         </div>
         {bill&&<div className='block'><div className='billing_popup'>
             <div>카카오페이 결제 후, <br/> <b>결제완료</b> 버튼을 눌러주세요</div>
