@@ -42,10 +42,11 @@ const Home = () =>{
     const [ route, setRoute ] = useState({display: 'block'})
     const [ display, setDisplay ] = useState({display: 'none'})
     const options = [
-        {distance:2.9, time:17, price:2900, img:routeImage1 },
-        {distance:2.9, time:17, price:2900, img:routeImage1},
-        {distance:3.5, time:25, price:'Free', img:routeImage2 }
+        {distance:2.9, time:17, price:2900, slope: [1,2,3,4,5,7,1,8,8,7], rough: [1,2,3,4,5,6,7,8,9,10]},
+        {distance:3.5, time:25, price:0, slope: [1,2,3,4,5,7,null,null,null,null], rough: [1,2,3,4,5,6,null,null,null,null]},
+        {distance:2.2, time:13, price:2500, slope: [5,2,5,7,6,6,5,3,2,1], rough: [5,6,7,1,2,3,8,9,5,4]}
     ]
+
 
     /** @type React.MutableRefObject<HTMLInputElement> */
     const originRef = useRef()
@@ -175,18 +176,18 @@ const Home = () =>{
         <button style={display}><Link to="/timer" className="btn btn-primary">START</Link></button>
         <HStack style={route}>
             <div className='routeList'>
-              <RouteOption/>
-                {/* {options.map(x=> 
+              {/* {options.map(x => {
+                <RouteOption info={x}/>
+              })}
+              <RouteOption /> */}
+                {options.map(x=> 
                 <div className='item' onClick={e=>{
                     setRoute({display:'none'})
                     setDisplay({display:'block'})
                 }}>
-                    <div>
-                        Distance : {x.distance} | Time : {x.time} | Price : {x.price}
-                    </div>
-                    <div><img width="70%" src={x.img} alt="route_image"/></div>
+                    <RouteOption info={x}/>
                 </div>
-                )} */}
+                )}
             </div>
         </HStack>
       </Box>

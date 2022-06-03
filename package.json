@@ -17,6 +17,7 @@
     "firebase": "^9.8.1",
     "framer-motion": "^6",
     "plotly.js": "^2.12.1",
+    "plotly.js-basic-dist-min": "^2.12.1",
     "react": "^18.1.0",
     "react-countdown-circle-timer": "^3.0.9",
     "react-dom": "^18.1.0",

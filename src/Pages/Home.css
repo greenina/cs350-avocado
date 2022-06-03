@@ -4,9 +4,7 @@
     align-items: center;
 }
 .item{
-    border: 1px solid black;
     flex-direction: column;
-    height: 150px;
     text-align: center;
 
 }
