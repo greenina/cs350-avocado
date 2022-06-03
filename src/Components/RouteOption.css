@@ -1,0 +1,8 @@
+.horizontal-line{
+    display: flex;
+    flex-direction: row;
+}
+.values{
+    display: flex;
+    flex-direction: row;
+}

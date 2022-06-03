@@ -15,8 +15,9 @@ import { FaLocationArrow, FaTimes } from 'react-icons/fa'
 import TextField from '@mui/material/TextField';
 import routeImage1 from './route1.png'
 import routeImage2 from './route2.png'
-import { Navigate } from 'react-router';
+import { Navigate, Route } from 'react-router';
 import { Link } from "react-router-dom"; 
+import RouteOption from '../Components/RouteOption';
   
 import {
     useJsApiLoader,
@@ -38,7 +39,7 @@ const Home = () =>{
     const [directionsResponse, setDirectionsResponse] = useState(null)
     const [distance, setDistance] = useState('')
     const [duration, setDuration] = useState('')
-    const [ route, setRoute ] = useState({display: 'none'})
+    const [ route, setRoute ] = useState({display: 'block'})
     const [ display, setDisplay ] = useState({display: 'none'})
     const options = [
         {distance:2.9, time:17, price:2900, img:routeImage1 },
@@ -174,7 +175,8 @@ const Home = () =>{
         <button style={display}><Link to="/timer" className="btn btn-primary">START</Link></button>
         <HStack style={route}>
             <div className='routeList'>
-                {options.map(x=> 
+              <RouteOption/>
+                {/* {options.map(x=> 
                 <div className='item' onClick={e=>{
                     setRoute({display:'none'})
                     setDisplay({display:'block'})
@@ -184,7 +186,7 @@ const Home = () =>{
                     </div>
                     <div><img width="70%" src={x.img} alt="route_image"/></div>
                 </div>
-                )}
+                )} */}
             </div>
         </HStack>
       </Box>
