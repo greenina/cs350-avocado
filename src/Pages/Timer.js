@@ -25,17 +25,19 @@ const Timer = () =>{
 
     return(
     <div className='area'>
-        Connected to Kickboard A323
-        Start Navigation Guide in
-        <CountdownCircleTimer
-          isPlaying
-          duration={3}
-          colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
-          colorsTime={[10, 6, 3, 0]}
-          onComplete={() => ({ shouldRepeat: true, delay: 1 })}
-        >
-          {renderTime}
-        </CountdownCircleTimer>
+        <p>Connecting to Kickboard A323</p>
+        <p>Start Navigation Guide in</p>
+        <div align="center">
+          <CountdownCircleTimer
+            isPlaying
+            duration={3}
+            colors={["#004777", "#F7B801", "#A30000", "#A30000"]}
+            colorsTime={[10, 6, 3, 0]}
+            onComplete={() => ({ shouldRepeat: true, delay: 1 })}
+          >
+            {renderTime}
+          </CountdownCircleTimer>
+        </div>
     </div>)
 }
 
