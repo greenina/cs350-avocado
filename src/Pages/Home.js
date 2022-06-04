@@ -12,10 +12,6 @@ import {
     Text,
   } from '@chakra-ui/react'
 import { FaLocationArrow, FaTimes } from 'react-icons/fa'
-import TextField from '@mui/material/TextField';
-import routeImage1 from './route1.png'
-import routeImage2 from './route2.png'
-import { Navigate, Route } from 'react-router';
 import { Link } from "react-router-dom"; 
 import RouteOption from '../Components/RouteOption';
   
@@ -42,9 +38,9 @@ const Home = () =>{
     const [ route, setRoute ] = useState({display: 'block'})
     const [ display, setDisplay ] = useState({display: 'none'})
     const options = [
-        {distance:2.9, time:17, price:2900, slope: [1,2,3,4,5,7,1,8,8,7], rough: [1,2,3,4,5,6,7,8,9,10]},
-        {distance:3.5, time:25, price:0, slope: [1,2,3,4,5,7,null,null,null,null], rough: [1,2,3,4,5,6,null,null,null,null]},
-        {distance:2.2, time:13, price:2500, slope: [5,2,5,7,6,6,5,3,2,1], rough: [5,6,7,1,2,3,8,9,5,4]}
+        {distance:2.9, time:17, price:2900, slope: [1,2,3,4,5,7,1,8,8,7], rough: [1,2,3,4,5,6,7,8,9,10], pos:0},
+        {distance:3.5, time:25, price:0, slope: [1,2,3,4,5,7,null,null,null,null], rough: [1,2,3,4,5,6,null,null,null,null],pos:0},
+        {distance:2.2, time:13, price:2500, slope: [5,2,5,7,6,6,5,3,2,1], rough: [5,6,7,1,2,3,8,9,5,4],pos:0}
     ]
 
 

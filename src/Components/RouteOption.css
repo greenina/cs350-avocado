@@ -9,6 +9,10 @@
 .bar{
     height: 7px;
 }
+.pos{
+    height: 10px;
+    border-radius: 3px;
+}
 .route-option{
     border: 1px solid black;
     padding: 10px;

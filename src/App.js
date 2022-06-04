@@ -6,6 +6,7 @@ import Search from './Pages/Search'
 import Timer from './Pages/Timer'
 import Riding from './Pages/Riding'
 import Billing from './Pages/Billing'
+import Maptest from './Pages/Maptest'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/timer" element = {<Timer/>} />
         <Route path="/riding" element = {<Riding/>} />
         <Route path="/billing" element = {<Billing/>} />
+        <Route path="/map" element = {<Maptest/>} />
       </Routes>
     </BrowserRouter>
   );

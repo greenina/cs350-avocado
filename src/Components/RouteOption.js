@@ -8,6 +8,7 @@ import { yellow } from '@mui/material/colors';
 
 const RouteOption = (props) => {
     console.log("PROPS,",props)
+    const pos = props.info.pos
     const dist = props.info.distance
     const time = props.info.time
     const price = props.info.price
@@ -26,6 +27,12 @@ const RouteOption = (props) => {
         var temp = 0
         var temp_stat = checkstat(l[0])
         for(var i=0;i<l.length;i++){
+            if(pos === i+1 && pos!=0){
+                result.push({num:temp, stat:temp_stat})
+                result.push({num:1, stat:'#000000'})
+                temp = 1
+                temp_stat = checkstat(l[i+1])
+            }
             if(checkstat(l[i]) === temp_stat){
                 temp = temp + 1
             } else {
@@ -41,8 +48,11 @@ const RouteOption = (props) => {
     const datas = getScope(rough)
 
     let bars = datas && datas.length && datas.map(function(item, i) {
+        if(item.stat === '#000000') return <div className="pos" style={{backgroundColor: item.stat, width: 2*item.num + '%'}}  key={i}>
+        .
+    </div>
         if(item.num > 0) {
-            console.log(item.stat," ", item.num)
+            
             return (
                 <div className="bar" style={{backgroundColor: item.stat, width: 10*item.num + '%'}}  key={i}>
                     .
@@ -77,7 +87,7 @@ const RouteOption = (props) => {
                 layout={ { 
                     showlegend: false, 
                     height:50,
-                    width : 300,
+                    width : 500,
                     margin: {
                     l: 10,
                     r: 10,
