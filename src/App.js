@@ -7,6 +7,7 @@ import Timer from './Pages/Timer'
 import Riding from './Pages/Riding'
 import Billing from './Pages/Billing'
 import Maptest from './Pages/Maptest'
+import Stop from './Pages/Stop'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/riding" element = {<Riding/>} />
         <Route path="/billing" element = {<Billing/>} />
         <Route path="/map" element = {<Maptest/>} />
+        <Route path="/stop" element = {<Stop/>} />
       </Routes>
     </BrowserRouter>
   );
