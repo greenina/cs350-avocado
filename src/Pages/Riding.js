@@ -3,6 +3,7 @@ import './Riding.css'
 import {auth} from '../firebase'
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
+import riding from '../Assets/riding.gif'
 
 const Riding = () =>{let navigate = useNavigate(); 
     const routeChange = () =>{ 
@@ -10,8 +11,9 @@ const Riding = () =>{let navigate = useNavigate();
       navigate(path);
     }
     return(
-    <div>
-        RIDING PAGE
+    <div className="riding" align="center" >
+        <img src={riding} alt='loading...'/>
+        <p>You cannot see the map while riding a kickboard</p>
         <Button variant="outlined" onClick={routeChange}>End Riding</Button>
     </div>)
 }
