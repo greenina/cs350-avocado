@@ -120,7 +120,7 @@ const Home = () =>{
     >
       <Box position='absolute' left={0} top={0} h='100%' w='100%'>
         {/* Google Map Box */}
-        <div style={showNav}><iframe width="100%" height="800px"src = "http://kko.to/NmwDUXvWP"></iframe></div>
+        <div style={showNav} id="fcontainer"><iframe id="frame" src = "http://kko.to/NmwDUXvWP"></iframe></div>
         <GoogleMap
           center={center}
           zoom={15}
@@ -184,29 +184,10 @@ const Home = () =>{
         
       </Box>
       <div style={ride} className='ride'>
-      <Button color="error"size="large"sx={ { borderRadius: 28 } }onClick={()=>{setOpen(true)}} variant="contained">RIDE</Button>
+      <Button color="error"size="large"sx={ { borderRadius: 28 } }onClick={()=>{routeChange()}} variant="contained">RIDE</Button>
       </div>
       
     </Flex>
-    <Modal
-        open={open}
-        // onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Ready to start the ride? 
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            You cannot view the screen while riding due to safety reason
-          </Typography>
-          <div className='buttons'>
-            <Button variant="outlined" onClick={()=>{setOpen(false)}} >DISMISS</Button>
-            <Button variant="contained" onClick={routeChange} >START</Button>
-          </div>
-        </Box>
-      </Modal>
     </div>)
 }
 
