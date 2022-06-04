@@ -3,7 +3,7 @@ import './Riding.css'
 import {auth} from '../firebase'
 import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
-import riding from '../Assets/riding.gif'
+import riding from '../assets/riding.gif'
 
 const Riding = () =>{let navigate = useNavigate(); 
     const routeChange = () =>{ 
