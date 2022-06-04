@@ -27,7 +27,7 @@ const Timer = () =>{
     <div className='area'>
         <p>Connecting to Kickboard A323</p>
         <p>Start Navigation Guide in</p>
-        <div align="center">
+        <div align="center" >
           <CountdownCircleTimer
             isPlaying
             duration={3}

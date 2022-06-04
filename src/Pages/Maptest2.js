@@ -26,11 +26,7 @@ const Maptest2=()=>{
     places.keywordSearch(e.target[0].value, placesSearchCB)
   }
 
-  var callback = function(result, status) {
-    if (status === kakao.maps.services.Status.OK) {
-        console.log("CALLBACK",result);
-    }
-  };
+  
   
   function placesSearchCB(data, status, pagination){
     debugger;

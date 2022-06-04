@@ -8,6 +8,7 @@ import Riding from './Pages/Riding'
 import Billing from './Pages/Billing'
 import Maptest from './Pages/Maptest'
 import Stop from './Pages/Stop'
+import QRcode from "./Pages/QRcode";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/billing" element = {<Billing/>} />
         <Route path="/map" element = {<Maptest/>} />
         <Route path="/stop" element = {<Stop/>} />
+        <Route path="/qrcode" element = {<QRcode/>} />
       </Routes>
     </BrowserRouter>
   );

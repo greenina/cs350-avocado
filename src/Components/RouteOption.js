@@ -64,9 +64,9 @@ const RouteOption = (props) => {
 
     return (
         <div >
-            <Button>
+            <Button variant="outlined" fullWidth>
             <div className='route-option'>
-            <div className='info'>
+            <div className='route-info'>
                 {dist} km | {time} min | {price} won
             </div>
             <div>

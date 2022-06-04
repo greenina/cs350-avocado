@@ -1,0 +1,27 @@
+.camera {
+    position: absolute; 
+    top: 0%; /* header height */
+    height: 100vh;
+    z-index: -10;
+}
+.camera .qrTag {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 50vw;
+    height: 50vw;
+    margin-top: -25vw;
+    margin-left: -25vw;
+    border: 4px solid white;
+    z-index: 5;
+}
+#return{
+    align-left: 6px;
+}
+#modal-modal-title{
+    text-align: center;
+}
+#modal-modal-description{
+    text-align: center;
+    padding-bottom: 10px;
+}

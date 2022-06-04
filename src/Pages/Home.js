@@ -52,7 +52,7 @@ const Home = () =>{
     const [ride, setRide] = useState({display: 'none'})
 
     const routeChange = () =>{ 
-      let path = `/timer`; 
+      let path = `/qrcode`; 
       navigate(path);
     }
     const style = {
@@ -120,7 +120,7 @@ const Home = () =>{
     >
       <Box position='absolute' left={0} top={0} h='100%' w='100%'>
         {/* Google Map Box */}
-        <div style={showNav}><iframe width="100%" height="600px"src = "http://kko.to/NmwDUXvWP"></iframe></div>
+        <div style={showNav}><iframe width="100%" height="800px"src = "http://kko.to/NmwDUXvWP"></iframe></div>
         <GoogleMap
           center={center}
           zoom={15}
@@ -147,7 +147,7 @@ const Home = () =>{
         shadow='base'
         minW='container.md'
         zIndex='1'
-        w='80%'
+        w='95%'
       >
         
         <div className='nav-wrap'>
@@ -165,6 +165,7 @@ const Home = () =>{
                 <ButtonGroup
                   orientation="vertical"
                   aria-label="vertical outlined button group"
+                  fullWidth
                 >
                   {options.map(x=> 
                   <div onClick={e=>{
@@ -183,7 +184,7 @@ const Home = () =>{
         
       </Box>
       <div style={ride} className='ride'>
-      <Button size="large"sx={ { borderRadius: 28 } }onClick={()=>{setOpen(true)}} variant="contained">RIDE</Button>
+      <Button color="error"size="large"sx={ { borderRadius: 28 } }onClick={()=>{setOpen(true)}} variant="contained">RIDE</Button>
       </div>
       
     </Flex>
