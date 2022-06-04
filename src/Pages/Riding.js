@@ -5,15 +5,39 @@ import Button from '@mui/material/Button';
 import { useNavigate } from "react-router-dom";
 import riding from '../Assets/riding.gif'
 
-const Riding = () =>{let navigate = useNavigate(); 
+const Riding = () =>{let navigate = useNavigate();
+    //End riding 했을 때 넘어가는 페이지
     const routeChangeToBill = () =>{ 
       let path = '/billing'; 
       navigate(path);
     }
+
+    //Pause riding 했을 때 넘어가는 페이지
     const routeChangeToMap = () =>{ 
       //TODO: 맵 중간 페이지로 이어주기
       let path = '/billing'; 
       navigate(path);
+    }
+
+    //print direction
+    const direction = [0,0,0,-1,0,0,0,0,0,0,1,0,0,0,0,1,0,0,1,0,0,0,0,-1,0,0,1,0,1,0]
+    for(let i = 1; i < direction.length; i++) {
+      notify_direction(i, direction[i])
+    }
+    function notify_direction(i, dir) {
+      setTimeout(function () {
+        switch(dir) {
+          case 0:
+            console.log('go straight')
+            break;
+          case 1:
+            console.log('turn right')
+            break;
+          case -1:
+            console.log('turn left')
+            break;
+        }
+      }, 3000*i);
     }
     return(
     <div className="riding" align="center" >
