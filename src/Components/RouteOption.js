@@ -5,6 +5,7 @@ import Plotly from "plotly.js-basic-dist-min";
 import createPlotlyComponent from "react-plotly.js/factory";
 import './RouteOption.css'
 import { yellow } from '@mui/material/colors';
+import Button from '@mui/material/Button';
 
 const RouteOption = (props) => {
     console.log("PROPS,",props)
@@ -62,7 +63,9 @@ const RouteOption = (props) => {
     }, this);
 
     return (
-        <div className='route-option'>
+        <div >
+            <Button>
+            <div className='route-option'>
             <div className='info'>
                 {dist} km | {time} min | {price} won
             </div>
@@ -101,6 +104,10 @@ const RouteOption = (props) => {
                 useResizeHandler
                 config={{responsive: true}}
             />
+            </div>
+            
+            </Button>
+            
         </div>
     )
 }

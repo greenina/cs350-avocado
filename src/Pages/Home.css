@@ -8,3 +8,20 @@
     text-align: center;
 
 }
+.search-wrap{
+    display: flex;
+    flex-direction: row;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px
+}
+.ride{
+    position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+}
