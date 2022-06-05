@@ -4,16 +4,17 @@ import {auth} from '../firebase'
 import { useCountdown, CountdownCircleTimer } from 'react-countdown-circle-timer'
 import { Link } from "react-router-dom"; 
 import Search from './Search'
-import { Navigate } from 'react-router';
+import { Navigate, useLocation, useNavigate } from 'react-router';
 
 const Timer = () =>{
+  let navigate = useNavigate();
+  let location = useLocation();
     const [display, setDisplay] = useState({display:'block'})
     const renderTime = ({ remainingTime }) => {
         if (remainingTime === 0) {
             setDisplay({display:'none'})
-            return (
-                <Navigate to="/riding" />
-            )
+            let path = '/riding'; 
+            navigate(path, {state: {option: location.state.option}});
           ;
         }
         return (

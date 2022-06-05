@@ -1,15 +1,16 @@
-import React, { useEffect } from 'react'
+import React, { useEffect} from 'react'
 import './Riding.css'
 import {auth} from '../firebase'
 import Button from '@mui/material/Button';
-import { useNavigate } from "react-router-dom";
-import riding from '../assets/riding.gif'
+import { useNavigate, useLocation } from "react-router-dom";
+import riding from '../Assets/riding.gif'
 
 const Riding = () =>{let navigate = useNavigate();
     //End riding 했을 때 넘어가는 페이지
+    let location = useLocation();
     const routeChangeToBill = () =>{ 
       let path = '/billing'; 
-      navigate(path);
+      navigate(path, {state: {option:location.state.option}});
     }
 
     //Pause riding 했을 때 넘어가는 페이지
