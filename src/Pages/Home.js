@@ -19,6 +19,7 @@ import IconButton from '@mui/material/IconButton';
 import { useNavigate } from "react-router-dom";
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
+import ButtonAppBar from '../Components/ButtonAppBar';
   
 import {
     useJsApiLoader,
@@ -111,6 +112,7 @@ const Home = () =>{
     
     return(
     <div>
+      <ButtonAppBar/>
             <Flex
       position='relative'
       flexDirection='column'

@@ -6,17 +6,20 @@ import Button from '@mui/material/Button';
 import Map from './map.png'
 import { useNavigate } from "react-router-dom";
 import { useState } from 'react';
+import ButtonAppBar from '../Components/ButtonAppBar'
 
 const Billing = () =>{
     const [bill, setBill] = useState(false);
     const creditableness = false;
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
-        let path = '/'; 
+        let path = '/home'; 
         navigate(path);
       }
     return(
-    <div className='box'>
+    <div>
+        <ButtonAppBar/>
+        <div className='box'>
         <div className="image">
             <img src={Map} alt="MAP"/>
         </div>
@@ -33,6 +36,7 @@ const Billing = () =>{
             <Button variant="contained" onClick={routeChange}>결제완료</Button>
             <div id="close" onClick ={()=>setBill(false)}>취소하기</div>
         </div></div>}
+    </div>
     </div>
     )
 }
