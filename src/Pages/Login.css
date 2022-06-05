@@ -5,13 +5,13 @@
 .img2{
     position: fixed;
 }
-.signin{
-    align-self: flex-end;
-}
 .riding2{
     display: flex;
     flex-direction: column;
     padding-top: 20%;
+}
+#rider{
+    opacity: 0.2;
 }
 
 

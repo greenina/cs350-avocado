@@ -17,15 +17,15 @@ const Login = () =>{
     return(
       <div>        
         <div className="riding2" align="center">
-        <div className='signin' width="50%">
+        <div className='signin' align="center" width="50%">
             <SignIn width="50%"/>
           </div>
         
-          <div>
-            <div className='img2'>
-              <img src={riding} alt='loading...' width="70%"/>
+          <div align="center">
+            <div className='img2' align="center">
+              <img id="rider"src={riding} alt='loading...' width="70%"/>
             </div>
-            <div className='logo'>
+            <div className='logo' align="center">
             <img src={sokik}  width="80%"/>
             </div>
           </div>
