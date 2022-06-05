@@ -120,7 +120,7 @@ const Home = () =>{
     >
       <Box position='absolute' left={0} top={0} h='100%' w='100%'>
         {/* Google Map Box */}
-        <div style={showNav} id="fcontainer"><iframe id="frame" src = "http://kko.to/NmwDUXvWP"></iframe></div>
+        <div style={showNav} id="fcontainer"><iframe id="frame" src = "https://kko.to/NmwDUXvWP"></iframe></div>
         <GoogleMap
           center={center}
           zoom={15}
