@@ -15,7 +15,7 @@ const Billing = () =>{
     console.log(location.option);
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
-        let path = '/home'; 
+        let path = '/'; 
         navigate(path);
       }
     return(

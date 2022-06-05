@@ -26,7 +26,7 @@ function SignIn() {
   const signInWithGoogle = async () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     await auth.signInWithPopup(provider);
-    window.location.href='/home'
+    window.location.href='/'
   }
 
   return (
@@ -39,7 +39,7 @@ function SignIn() {
 function SignOut() {
   const signOutWithGoogle = () => {
     // auth.signOut()
-    window.location.href='/'
+    window.location.href='/login'
   }
   return (
     <div>
