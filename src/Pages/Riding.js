@@ -15,7 +15,7 @@ const Riding = () =>{let navigate = useNavigate();
     //Pause riding 했을 때 넘어가는 페이지
     const routeChangeToMap = () =>{ 
       //TODO: 맵 중간 페이지로 이어주기
-      let path = '/billing'; 
+      let path = '/stop'; 
       navigate(path);
     }
 
