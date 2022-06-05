@@ -51,10 +51,11 @@ const Home = () =>{
     let navigate = useNavigate(); 
     const [open, setOpen] = useState(false)
     const [ride, setRide] = useState({display: 'none'})
+    const [option, setOption] = useState(null);
 
     const routeChange = () =>{ 
       let path = `/qrcode`; 
-      navigate(path);
+      navigate(path, {state: {option:option}});
     }
     const style = {
       position: 'absolute',
@@ -173,6 +174,7 @@ const Home = () =>{
                   <div onClick={e=>{
                       setRoute({display:'none'}) 
                       setRide({display:'block'})
+                      setOption(x)
                   }}>
                       <RouteOption info={x}/>
                   </div>
@@ -186,7 +188,7 @@ const Home = () =>{
         
       </Box>
       <div style={ride} className='ride'>
-      <Button color="error"size="large"sx={ { borderRadius: 28 } }onClick={()=>{routeChange()}} variant="contained">RIDE</Button>
+      <Button color="error"size="large"sx={ { borderRadius: 28 } } onClick={()=>{routeChange()}} variant="contained">RIDE</Button>
       </div>
       
     </Flex>

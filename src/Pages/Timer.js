@@ -2,19 +2,20 @@ import React, { useEffect, useState } from 'react'
 import './Timer.css'
 import {auth} from '../firebase'
 import { useCountdown, CountdownCircleTimer } from 'react-countdown-circle-timer'
-import { Link } from "react-router-dom"; 
+import { Link, useNavigate, useLocation } from "react-router-dom"; 
 import { Navigate } from 'react-router';
 import ButtonAppBar from '../Components/ButtonAppBar';
 import { Button } from '@mui/material';
 
 const Timer = () =>{
+  let navigate = useNavigate();
+  let location = useLocation();
     const [display, setDisplay] = useState({display:'block'})
     const renderTime = ({ remainingTime }) => {
         if (remainingTime === 0) {
             setDisplay({display:'none'})
-            return (
-                <Navigate to="/riding" />
-            )
+            let path = '/riding'; 
+            navigate(path, {state: {option: location.state.option}});
           ;
         }
         return (

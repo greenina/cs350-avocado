@@ -1,8 +1,8 @@
-import React, { useState, useRef  } from 'react'
+import React, { useState, useRef } from 'react'
 import './QRcode.css'
 import Camera, {FACING_MODES} from "react-html5-camera-photo";
 import 'react-html5-camera-photo/build/css/index.css';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation  } from "react-router-dom";
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
@@ -24,6 +24,7 @@ const QRcode = () =>{
   };
   const [open,setOpen] = useState(false)
   let navigate = useNavigate();
+  let location = useLocation();
   function handleTakePhoto (dataUri) {
     setOpen(true)
   }
@@ -33,7 +34,7 @@ const QRcode = () =>{
     }
     const proceed = () => {
       let path = '/timer'
-      navigate(path)
+      navigate(path, {state: {option: location.state.option}});
     }
 
     return(

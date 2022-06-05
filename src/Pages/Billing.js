@@ -4,13 +4,15 @@ import {auth} from '../firebase'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
 import Map from './map.png'
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from 'react';
 import ButtonAppBar from '../Components/ButtonAppBar'
 
 const Billing = () =>{
     const [bill, setBill] = useState(false);
-    const creditableness = false;
+    let location = useLocation();
+    const riding_info = location.state.option;
+    console.log(location.option);
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
         let path = '/home'; 
@@ -25,10 +27,10 @@ const Billing = () =>{
         </div>
         <div className='info'>
             <h3>Riding Info</h3>
-            <div>Distance <span>2000m</span> </div>
-            <div>Time <span>00:20:00</span> </div>
-            <div>Cost <span>{creditableness?"Free":"6000won"}</span> </div>
-            {creditableness?<Button variant="contained" onClick={routeChange}>CONFIRM</Button>:<Button variant="contained" onClick={()=>{setBill(true)}}>PAYMENT</Button>}
+            <div>Distance <span>{riding_info.distance}km</span> </div>
+            <div>Time <span>00:{riding_info.time}:00</span> </div>
+            <div>Cost <span>{riding_info.price===0?"Free rider":riding_info.price+"won"}</span> </div>
+            {riding_info.price===0?<Button variant="contained" onClick={routeChange}>CONFIRM</Button>:<Button variant="contained" onClick={()=>{setBill(true)}}>PAYMENT</Button>}
 
         </div>
         {bill&&<div className='block'><div className='billing_popup'>
