@@ -68,8 +68,8 @@ const QRcode = () =>{
             You cannot view the screen while riding due to <br/>safety reason
           </Typography>
           <div className='buttons'>
-            <Button variant="outlined" onClick={()=>{setOpen(false)}} >BACK</Button>
-            <Button variant="contained" onClick={()=>proceed()} >START</Button>
+            <Button id = "back" variant="outlined" onClick={()=>{setOpen(false)}} >BACK</Button>
+            <Button id = "start" variant="contained" onClick={()=>proceed()} >START</Button>
           </div>
         </Box>
       </Modal>

@@ -153,12 +153,12 @@ const Home = () =>{
         
         <div className='nav-wrap'>
           <div className='search-wrap'>
-            <TextField size="small" fullWidth id="outlined-basic" label="Destination" variant="outlined" />
+            <TextField size="small" fullWidth id="outlined-basic" label="Destination" variant="outlined" name = "destination"/>
             <IconButton onClick={()=>{
               setShowNav({display:'block'})
               setRoute({display:'block'})
             }}color="primary" aria-label="upload picture" component="span">
-              <SearchIcon />
+              <SearchIcon id = "search"/>
             </IconButton>
           </div>
           <div style={route}>
@@ -168,8 +168,11 @@ const Home = () =>{
                   aria-label="vertical outlined button group"
                   fullWidth
                 >
-                  {options.map(x=> 
-                  <div onClick={e=>{
+                  {options.map((x,index)=> 
+                  <div 
+                      className='route_button'
+                      id ={"route"+index}
+                      onClick={e=>{
                       setRoute({display:'none'}) 
                       setRide({display:'block'})
                       setOption(x)
@@ -186,7 +189,7 @@ const Home = () =>{
         
       </Box>
       <div style={ride} className='ride'>
-      <Button color="error"size="large"sx={ { borderRadius: 28 } } onClick={()=>{routeChange()}} variant="contained">RIDE</Button>
+      <Button color="error"size="large"sx={ { borderRadius: 28 } } onClick={()=>{routeChange()}} variant="contained" id = "ride">RIDE</Button>
       </div>
       
     </Flex>
