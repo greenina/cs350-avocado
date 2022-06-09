@@ -15,13 +15,14 @@ const RouteOption = (props) => {
     const price = props.info.price
     const slope = props.info.slope
     const rough = props.info.rough
-    const size = 10
+    const size = 30
     
     const checkstat = (x) => {
         if (x == null) return '#ffffff' 
-        else if(x>7) return '#eb4d4b'
-        else if (x>3) return '#ffff00'
-        else return '#6ab04c'
+        else if(x===2) return '#eb4d4b'
+        else if (x===1) return '#ffff00'
+        else if(x===0) return '#6ab04c'
+        else return '#ffffff' 
     }
     const getScope = (l) => {
         var result = []
@@ -55,7 +56,7 @@ const RouteOption = (props) => {
         if(item.num > 0) {
             
             return (
-                <div className="bar" style={{backgroundColor: item.stat, width: 10*item.num + '%'}}  key={i}>
+                <div className="bar" style={{backgroundColor: item.stat, width: 20*item.num + '%'}}  key={i}>
                     .
                 </div>
             )
@@ -90,10 +91,10 @@ const RouteOption = (props) => {
                 layout={ { 
                     showlegend: false, 
                     height:50,
-                    width : 500,
+                    width : 400,
                     margin: {
-                    l: 10,
-                    r: 10,
+                    l: 0,
+                    r: 0,
                     b: 7,
                     t: 10,
                     pad: 3

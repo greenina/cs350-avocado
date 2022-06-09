@@ -43,9 +43,14 @@ const Home = () =>{
     const [duration, setDuration] = useState('')
     const [ route, setRoute ] = useState({display: 'none'})
     const options = [
-        {distance:2.9, time:17, price:2900, slope: [1,2,3,4,5,7,1,8,8,7], rough: [1,2,3,4,5,6,7,8,9,10], pos:0},
-        {distance:3.5, time:25, price:0, slope: [1,2,3,4,5,7,null,null,null,null], rough: [1,2,3,4,5,6,null,null,null,null],pos:0},
-        {distance:2.2, time:13, price:2500, slope: [5,2,5,7,6,6,5,3,2,1], rough: [5,6,7,1,2,3,8,9,5,4],pos:0}
+        {distance:2.9, time:17, price:2900, slope: [2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 2, 4, 10, 15, 21, 26, 32, 42, 56, 65, 66, 67, 68, 71, 77, 92, 98, 100], rough: [1, 0, 1, 2, 0, 2, 1, 2, 2, 1, 1, 0, 2, 0, 0, 1, 0, 1, 0, 0, 1, 2, 0, 0, 0, 2, 0, 1, 1, 1], pos:0},
+        {distance:3.5, time:25, price:3100, slope: [0, 0, 0, 1, 2, 4, 5, 6, 7, 8, 10, 11, 12, 15, 20, 26, 31, 38, 45, 46, 46, 47, 47, 49, 55, 77, 96, 98, 98, 99]
+          , rough: [0, 0, 2, 0, 0, 0, 0, 2, 0, 0, 2, 0, 2, 2, 1, 1, 1, 0, 2, 2, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0],pos:0},
+        {distance:2.2, time:13, price:2500, slope: [0, 1, 1, 2, 2, 3, 4, 4, 5, 5, 5, 5, 7, 6, 9, 14, 20, 27, 33, 40, 45, 48, 48, 49, 50, 67, 89, 99, 99, 100]
+          , rough: [0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 0, 2, 0, 1, 0, 2, 2, 0, 1, 1, 1, 1, 2],pos:0},
+        {distance:2.3, time:14, price:0, slope: [2, 1, 0, 0, 0, null, null, null, null, 1, 1, 1, 2, 4, null, null, 21, 26, 32, 42, null, null, null, null, null, 71, 77, 92, 98, 100]
+          , rough: [1, 0, 1, 2, 0, null, null, null, null, 1, 1, 0, 2, 0, null, null, 0, 1, 0, 0, null, null, null, null, null, 2, 0, 1, 1, 1]
+          ,pos:0}
     ]
     const [showNav, setShowNav] = useState({display: 'none'})
     let navigate = useNavigate(); 
