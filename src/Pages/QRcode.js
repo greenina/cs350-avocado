@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import Typography from '@mui/material/Typography';
 import {Box} from '@chakra-ui/react'
+import ButtonAppBar from '../Components/ButtonAppBar';
 
 const QRcode = () =>{
   const style = {
@@ -38,6 +39,7 @@ const QRcode = () =>{
 
     return(
       <div>
+        <ButtonAppBar/>
         <div id="return">
         <Button  variant="outlined" onClick={routeChange}>return</Button>
         </div>

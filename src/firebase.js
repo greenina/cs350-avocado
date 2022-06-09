@@ -3,6 +3,8 @@ import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 import 'firebase/compat/auth';
 import Button from '@mui/material/Button';
+import signinBtn from './assets/signin.png'
+import './firebase.css'
 
 const firebaseConfig = {
   apiKey: "AIzaSyC9pftT4dIMXTh-EwKPWT4HLwXf1hDq9Qo",
@@ -24,22 +26,25 @@ function SignIn() {
   const signInWithGoogle = async () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     await auth.signInWithPopup(provider);
+    window.location.href='/'
   }
 
   return (
-    <div>
-      <Button color="inherit" onClick = {signInWithGoogle}>Login</Button>
+    <div className='google'>
+      <img width="50%" src={signinBtn} onClick = {signInWithGoogle}/>
     </div>
   )
 }
 
 function SignOut() {
   const signOutWithGoogle = () => {
-    auth.signOut()
-    window.location.href='/'
+    // auth.signOut()
+    window.location.href='/login'
   }
-  return auth.currentUser && (
-    <button onClick = {signOutWithGoogle}>Sign Out</button>
+  return (
+    <div>
+      <Button color="inherit" onClick = {signOutWithGoogle}>SignOut</Button>
+    </div>
   )
 }
 

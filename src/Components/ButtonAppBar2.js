@@ -9,7 +9,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import {SignIn, SignOut} from '../firebase'
 import { Link } from "react-router-dom"; 
 
-export default function ButtonAppBar() {
+export default function ButtonAppBar2() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -26,7 +26,6 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               SOKIK 
           </Typography>
-          <SignOut/>
         </Toolbar>
       </AppBar>
     </Box>
