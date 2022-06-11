@@ -47,7 +47,7 @@ const Riding = () =>{let navigate = useNavigate();
         <div className="riding" align="center" >
         <img src={riding} alt='loading...' width="80%"/>
         <p>**You cannot see the map while riding a kickboard**</p>
-        <p><Button variant="outlined" onClick={routeChangeToMap}>Pause Riding</Button></p>
+        {/* <p><Button variant="outlined" onClick={routeChangeToMap}>Pause Riding</Button></p> */}
         <p><Button variant="outlined" onClick={routeChangeToBill}>End Riding</Button></p>
     </div>
       </div>
