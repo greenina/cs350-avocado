@@ -1,11 +1,13 @@
 import { display } from '@mui/system';
-import React, {useLayoutEffect, useEffect, useRef, useState} from 'react'
+import React, {useLayoutEffect, useEffect, useRef, useState} from 'react';
 import Plot from 'react-plotly.js';
 import Plotly from "plotly.js-basic-dist-min";
 import createPlotlyComponent from "react-plotly.js/factory";
 import './RouteOption.css'
 import { yellow } from '@mui/material/colors';
 import Button from '@mui/material/Button';
+import {getScope} from './RouteOptionfunc';
+
 
 const RouteOption = (props) => {
     console.log("PROPS,",props)
@@ -15,38 +17,10 @@ const RouteOption = (props) => {
     const price = props.info.price
     const slope = props.info.slope
     const rough = props.info.rough
-    const size = 10
+    const size = 30
     
-    const checkstat = (x) => {
-        if (x == null) return '#ffffff' 
-        else if(x>7) return '#eb4d4b'
-        else if (x>3) return '#ffff00'
-        else return '#6ab04c'
-    }
-    const getScope = (l) => {
-        var result = []
-        var temp = 0
-        var temp_stat = checkstat(l[0])
-        for(var i=0;i<l.length;i++){
-            if(pos === i+1 && pos!=0){
-                result.push({num:temp, stat:temp_stat})
-                result.push({num:1, stat:'#000000'})
-                temp = 1
-                temp_stat = checkstat(l[i+1])
-            }
-            if(checkstat(l[i]) === temp_stat){
-                temp = temp + 1
-            } else {
-                result.push({num:temp, stat:temp_stat})
-                temp = 1
-                temp_stat = checkstat(l[i])
-            }
-        }
-        result.push({num:temp, stat:temp_stat})
-        return result
-    }
 
-    const datas = getScope(rough)
+    const datas = getScope(rough, pos)
 
     let bars = datas && datas.length && datas.map(function(item, i) {
         if(item.stat === '#000000') return <div className="pos" style={{backgroundColor: item.stat, width: 2*item.num + '%'}}  key={i}>
@@ -55,7 +29,7 @@ const RouteOption = (props) => {
         if(item.num > 0) {
             
             return (
-                <div className="bar" style={{backgroundColor: item.stat, width: 10*item.num + '%'}}  key={i}>
+                <div className="bar" style={{backgroundColor: item.stat, width: 20*item.num + '%'}}  key={i}>
                     .
                 </div>
             )
@@ -90,10 +64,10 @@ const RouteOption = (props) => {
                 layout={ { 
                     showlegend: false, 
                     height:50,
-                    width : 500,
+                    width : 400,
                     margin: {
-                    l: 10,
-                    r: 10,
+                    l: 0,
+                    r: 0,
                     b: 7,
                     t: 10,
                     pad: 3

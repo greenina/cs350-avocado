@@ -1,0 +1,26 @@
+[debug] [2022-06-09T17:23:04.566Z] ----------------------------------------------------------------------
+[debug] [2022-06-09T17:23:04.567Z] Command:       /Users/inhwasong/.nvm/versions/node/v16.14.0/bin/node /Users/inhwasong/.nvm/versions/node/v16.14.0/bin/firebase deploy
+[debug] [2022-06-09T17:23:04.567Z] CLI Version:   11.0.1
+[debug] [2022-06-09T17:23:04.567Z] Platform:      darwin
+[debug] [2022-06-09T17:23:04.567Z] Node Version:  v16.14.0
+[debug] [2022-06-09T17:23:04.568Z] Time:          Fri Jun 10 2022 02:23:04 GMT+0900 (대한민국 표준시)
+[debug] [2022-06-09T17:23:04.568Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-09T17:23:04.595Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-09T17:23:04.595Z] > authorizing via signed-in user (igreen0485@gmail.com)
+[debug] [2022-06-09T17:23:04.595Z] [iam] checking project sokik-d679c for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-06-09T17:23:04.596Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/sokik-d679c:testIamPermissions [none]
+[debug] [2022-06-09T17:23:04.596Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sokik-d679c:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-09T17:23:05.699Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/sokik-d679c:testIamPermissions 200
+[debug] [2022-06-09T17:23:05.700Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/sokik-d679c:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-06-09T17:23:05.701Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/sokik-d679c [none]
+[debug] [2022-06-09T17:23:06.137Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/sokik-d679c 200
+[debug] [2022-06-09T17:23:06.138Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/sokik-d679c {"projectId":"sokik-d679c","projectNumber":"712612822064","displayName":"sokik","name":"projects/sokik-d679c","resources":{"hostingSite":"sokik-d679c","storageBucket":"sokik-d679c.appspot.com","locationId":"asia-northeast2"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'sokik-d679c'...
+[info] 
+[info] i  deploying firestore, hosting 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-06-09T17:23:06.145Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/sokik-d679c:test [none]
+[debug] [2022-06-09T17:23:06.145Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/sokik-d679c:test [omitted]
