@@ -34,7 +34,7 @@ const QRcode = () =>{
     }
     const proceed = () => {
       let path = '/timer'
-      navigate(path, {state: {option: location.state.option}});
+      navigate(path, {state: {option: location.state.option!=null?location.state.option:{distance:0, time:0, price:100, slope:[], route:[], pos:0}}});
     }
 
     return(

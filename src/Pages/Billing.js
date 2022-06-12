@@ -7,11 +7,12 @@ import Map from './map.png'
 import { useNavigate, useLocation } from "react-router-dom";
 import { useState } from 'react';
 import ButtonAppBar from '../Components/ButtonAppBar'
+import gpay from './images/gpay.png'
 
 const Billing = () =>{
     const [bill, setBill] = useState(false);
     let location = useLocation();
-    const riding_info = location.state.option;
+    const riding_info = location.state.option!=null?location.state.option:{distance:0, time:0, price:100, slope:[], route:[], pos:0};
     console.log(location.option);
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
@@ -22,23 +23,30 @@ const Billing = () =>{
     <div>
         <ButtonAppBar/>
         <div className='box'>
-        <div className="image">
-            <img src={Map} alt="MAP"/>
-        </div>
-        <div className='info'>
-            <h3>Riding Info</h3>
-            <div>Distance <span>{riding_info.distance}km</span> </div>
-            <div>Time <span>00:{riding_info.time}:00</span> </div>
-            <div>Cost <span>{riding_info.price===0?"Free rider":riding_info.price+"won"}</span> </div>
-            {riding_info.price===0?<Button id ="confirm" variant="contained" onClick={routeChange}>CONFIRM</Button>:<Button id = "payment" variant="contained" onClick={()=>{setBill(true)}}>PAYMENT</Button>}
+            <div className="image">
+                <img src={Map} alt="MAP"/>
+            </div>
+            <div className='info'>
+                <h3>Riding Info</h3>
+                <div>Distance <span>{riding_info.distance}km</span> </div>
+                <div>Time <span>00:{riding_info.time}:00</span> </div>
+                <div>Cost <span>{riding_info.price===0?"Free rider":riding_info.price+"won"}</span> </div>
+                {riding_info.price===0?<Button id ="confirm" variant="contained" onClick={routeChange}>CONFIRM</Button>:<Button id = "payment" variant="contained" onClick={()=>{setBill(true)}}>PAYMENT</Button>}
 
+            </div>
+            {bill&&
+            <div className='block'>
+                <div className='billing_popup'>
+                    <div><img src={gpay} width="80%"/></div>
+                    <div>Click <b>Complete</b><br/>  after Google Paying</div>
+                    <Button id = "confirm" variant="contained" onClick={routeChange}>Complete</Button>
+                    <div id="close" onClick ={()=>setBill(false)}>Cancel</div>
+
+                </div>
+
+            </div>
+            } 
         </div>
-        {bill&&<div className='block'><div className='billing_popup'>
-            <div>카카오페이 결제 후, <br/> <b>결제완료</b> 버튼을 눌러주세요</div>
-            <Button id = "confirm" variant="contained" onClick={routeChange}>결제완료</Button>
-            <div id="close" onClick ={()=>setBill(false)}>취소하기</div>
-        </div></div>}
-    </div>
     </div>
     )
 }

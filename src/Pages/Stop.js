@@ -8,7 +8,15 @@ import mapImg from './images/map2.png'
 import ButtonAppBar from '../Components/ButtonAppBar';
 
 const Stop = () =>{
-    const info = {distance:0.5, time:3, price:1000, slope: [1,2,3,4,5,7,1,8,8,7], rough: [1,2,3,4,5,6,7,8,9,10], pos:5}
+    const info = 
+    {
+      distance:2.3, 
+      time:14, 
+      price:1000, 
+      slope: [2,1,0,0,0,null,null,null,null,1,1,1,2,4,null,null,21,26,32,42,null,null,null,null,null,71,77,92,98,100], 
+      rough: [1,0,1,2,0,null,null,null,null,1,1,0,2,0,null,null,0,1,0,0,null,null,null,null,null,2,0,1,1,1],
+      pos:15
+    }
     let navigate = useNavigate(); 
     const routeChange = () =>{ 
       let path = '/billing'; 

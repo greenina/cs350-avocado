@@ -62,10 +62,10 @@ describe('test scenario 2: free rider case ', () => {
     })
     
   })
-  context('using freerider route (2nd)', ()=>{
-    it("choose 2nd route", ()=>{
+  context('using freerider route (last)', ()=>{
+    it("choose last route", ()=>{
       cy.wait(500);
-      cy.get(".route_button#route1").click();
+      cy.get(".route_button#route3").click();
     })
     it("join ride", ()=>{
       cy.get("button#ride").click();

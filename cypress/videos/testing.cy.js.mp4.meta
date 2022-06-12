@@ -1,0 +1,186 @@
+;FFMETADATA1
+[CHAPTER]
+TIMEBASE=1/1000
+START=3387
+END=9400
+title=test scenario 1: normal user case  visit home hompage
+[CHAPTER]
+TIMEBASE=1/1000
+START=13385
+END=15435
+title=test scenario 1: normal user case  visit home fill destination
+[CHAPTER]
+TIMEBASE=1/1000
+START=16378
+END=17487
+title=test scenario 1: normal user case  visit home search route
+[CHAPTER]
+TIMEBASE=1/1000
+START=14987
+END=18601
+title=test scenario 1: normal user case  using first route choose first route
+[CHAPTER]
+TIMEBASE=1/1000
+START=20596
+END=22237
+title=test scenario 1: normal user case  using first route join ride
+[CHAPTER]
+TIMEBASE=1/1000
+START=23524
+END=23880
+title=test scenario 1: normal user case  using first route take qr code
+[CHAPTER]
+TIMEBASE=1/1000
+START=20972
+END=24243
+title=test scenario 1: normal user case  using first route start navigate
+[CHAPTER]
+TIMEBASE=1/1000
+START=27351
+END=27521
+title=test scenario 1: normal user case  get navigation end navigation
+[CHAPTER]
+TIMEBASE=1/1000
+START=27503
+END=27694
+title=test scenario 1: normal user case  end navigation pay fee
+[CHAPTER]
+TIMEBASE=1/1000
+START=27444
+END=27889
+title=test scenario 1: normal user case  end navigation finish payment
+[CHAPTER]
+TIMEBASE=1/1000
+START=26728
+END=28337
+title=test scenario 2: free rider case  visit home hompage
+[CHAPTER]
+TIMEBASE=1/1000
+START=29369
+END=29948
+title=test scenario 2: free rider case  visit home fill destination
+[CHAPTER]
+TIMEBASE=1/1000
+START=30247
+END=30530
+title=test scenario 2: free rider case  visit home search route
+[CHAPTER]
+TIMEBASE=1/1000
+START=29231
+END=30817
+title=test scenario 2: free rider case  using freerider route (last) choose last route
+[CHAPTER]
+TIMEBASE=1/1000
+START=32091
+END=32405
+title=test scenario 2: free rider case  using freerider route (last) join ride
+[CHAPTER]
+TIMEBASE=1/1000
+START=32563
+END=32724
+title=test scenario 2: free rider case  using freerider route (last) take qr code
+[CHAPTER]
+TIMEBASE=1/1000
+START=29593
+END=32888
+title=test scenario 2: free rider case  using freerider route (last) start navigate
+[CHAPTER]
+TIMEBASE=1/1000
+START=35904
+END=36191
+title=test scenario 2: free rider case  get navigation end navigation
+[CHAPTER]
+TIMEBASE=1/1000
+START=35636
+END=36480
+title=test scenario 2: free rider case  end navigation finish riding
+[CHAPTER]
+TIMEBASE=1/1000
+START=34856
+END=37328
+title=test scenario 3: connect fault kickboard visit home hompage
+[CHAPTER]
+TIMEBASE=1/1000
+START=36548
+END=39805
+title=test scenario 3: connect fault kickboard visit home fil destination
+[CHAPTER]
+TIMEBASE=1/1000
+START=42349
+END=43071
+title=test scenario 3: connect fault kickboard visit home search route
+[CHAPTER]
+TIMEBASE=1/1000
+START=41962
+END=43796
+title=test scenario 3: connect fault kickboard using first route choose first route
+[CHAPTER]
+TIMEBASE=1/1000
+START=45239
+END=45634
+title=test scenario 3: connect fault kickboard using first route join ride
+[CHAPTER]
+TIMEBASE=1/1000
+START=45767
+END=46034
+title=test scenario 3: connect fault kickboard using first route take qr code
+[CHAPTER]
+TIMEBASE=1/1000
+START=46073
+END=46308
+title=test scenario 3: connect fault kickboard using first route cancel connect
+[CHAPTER]
+TIMEBASE=1/1000
+START=44646
+END=46548
+title=test scenario 4: stop riding during riding  visit home hompage
+[CHAPTER]
+TIMEBASE=1/1000
+START=44591
+END=48453
+title=test scenario 4: stop riding during riding  visit home fill destination
+[CHAPTER]
+TIMEBASE=1/1000
+START=51423
+END=52324
+title=test scenario 4: stop riding during riding  visit home search route
+[CHAPTER]
+TIMEBASE=1/1000
+START=51507
+END=53228
+title=test scenario 4: stop riding during riding  using first route choose first route
+[CHAPTER]
+TIMEBASE=1/1000
+START=54509
+END=54952
+title=test scenario 4: stop riding during riding  using first route join ride
+[CHAPTER]
+TIMEBASE=1/1000
+START=55115
+END=55401
+title=test scenario 4: stop riding during riding  using first route take qr code
+[CHAPTER]
+TIMEBASE=1/1000
+START=52417
+END=55689
+title=test scenario 4: stop riding during riding  using first route start navigate
+[CHAPTER]
+TIMEBASE=1/1000
+START=58639
+END=58968
+title=test scenario 4: stop riding during riding  get navigation stop navigation
+[CHAPTER]
+TIMEBASE=1/1000
+START=59001
+END=59300
+title=test scenario 4: stop riding during riding  stop navigation end riding
+[CHAPTER]
+TIMEBASE=1/1000
+START=59039
+END=59604
+title=test scenario 4: stop riding during riding  end navigation pay fee
+[CHAPTER]
+TIMEBASE=1/1000
+START=59211
+END=60172
+title=test scenario 4: stop riding during riding  end navigation finish payment

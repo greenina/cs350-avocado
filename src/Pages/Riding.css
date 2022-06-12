@@ -1,3 +1,8 @@
 .riding{
     margin: 20px;
 }
+
+#pause {
+    color: white;
+    border: none;
+}

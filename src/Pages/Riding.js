@@ -11,7 +11,7 @@ const Riding = () =>{let navigate = useNavigate();
     let location = useLocation();
     const routeChangeToBill = () =>{ 
       let path = '/billing'; 
-      navigate(path, {state: {option:location.state.option}});
+      navigate(path, {state: {option:location.state.option!=null?location.state.option:{distance:0, time:0, price:100, slope:[], route:[], pos:0}}});
     }
 
     //Pause riding 했을 때 넘어가는 페이지

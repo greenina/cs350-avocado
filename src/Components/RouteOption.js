@@ -27,7 +27,6 @@ const RouteOption = (props) => {
         .
     </div>
         if(item.num > 0) {
-            
             return (
                 <div className="bar" style={{backgroundColor: item.stat, width: 20*item.num + '%'}}  key={i}>
                     .
