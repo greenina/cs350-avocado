@@ -48,13 +48,11 @@ const RouteOption = (props) => {
     }
 
     const datas = getScope(rough)
-
     let bars = datas && datas.length && datas.map(function(item, i) {
         if(item.stat === '#000000') return <div className="pos" style={{backgroundColor: item.stat, width: 2*item.num + '%'}}  key={i}>
         .
     </div>
         if(item.num > 0) {
-            
             return (
                 <div className="bar" style={{backgroundColor: item.stat, width: 20*item.num + '%'}}  key={i}>
                     .
